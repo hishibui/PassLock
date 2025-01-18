@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator - PassLock</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="logo">PassLock</a>
+        <div class="nav-links">
+            <a href="generator.html" class="active">Generator</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="signup.html" class="btn-primary">Get started</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="generator-section">
+            <div class="container text-center">
+                <div class="section-tag">Password Generator</div>
+                <h1 class="generator-title">Strong Passwords, Zero Stress</h1>
+                <p class="generator-subtitle">Click once. Get a password that works. It's that easy.</p>
+
+                <div class="generator-container">
+                    <div class="password-display">
+                        <input type="text" id="passwordOutput" readonly value="Click generate to create password">
+                        <button id="copyButton" class="btn-icon" aria-label="Copy password">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="strength-meter">
+                        <div class="strength-bar">
+                            <div id="strengthProgress" class="strength-progress"></div>
+                        </div>
+                        <p class="strength-text">Password Strength: <span id="strengthLabel">Generate a password</span></p>
+                    </div>
+
+                    <div class="password-options">
+                        <div class="option-group">
+                            <label for="lengthSlider">Password Length: <span id="lengthValue">16</span></label>
+                            <input type="range" min="8" max="24" value="16" id="lengthSlider" class="range-slider">
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="uppercase" checked>
+                                <span class="checkbox-text">Uppercase Letters</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="numbers" checked>
+                                <span class="checkbox-text">Numbers</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="symbols" checked>
+                                <span class="checkbox-text">Special Characters</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="generateButton" class="btn-primary btn-large">Generate Password</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Products</h4>
+                <a href="generator.html">Password Generator</a>
+                <a href="#">Password Manager</a>
+                <a href="#">Enterprise Solutions</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Documentation</a>
+                <a href="#">Security</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PassLock. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Copied to clipboard!</span>
+        </div>
+    </div>
+
+    <script src="../js/generator.js" defer></script>
+</body>
+</html> 

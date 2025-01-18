@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - PassLock</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("rmFrozSxjkNidLd1-"); // Your public key is already correct
+        })();
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="logo">PassLock</a>
+        <div class="nav-links">
+            <a href="generator.html">Generator</a>
+            <a href="manager.html">Manager</a>
+            <a href="feedback.html" class="active">Feedback</a>
+            <a href="signup.html" class="btn-primary">Get started</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="feedback-section">
+            <div class="container text-center">
+                <div class="section-tag">Feedback</div>
+                <h1 class="feedback-title">Tell Us What You Think</h1>
+                <p class="feedback-subtitle">Love PassLock? Have ideas? We're all ears.</p>
+
+                <div class="feedback-container">
+                    <form class="feedback-form" id="feedbackForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-type">Type of Feedback</label>
+                            <select id="feedback-type" required>
+                                <option value="">Select type</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="praise">Praise</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Tell us your thoughts..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-large">Send Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Product</h4>
+                <a href="generator.html">Password Generator</a>
+                <a href="manager.html">Password Manager</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Help</h4>
+                <a href="feedback.html">Contact Us</a>
+                <a href="#">FAQs</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PassLock. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/feedback.js"></script>
+</body>
+</html> 
